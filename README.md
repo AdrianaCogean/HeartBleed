@@ -10,7 +10,8 @@ The Heartbleed bug allows anyone on the Internet to read the memory of the syste
 1. [Install Ubuntu 11.04](http://old-releases.ubuntu.com/releases/11.04/)
 2. [Download openssl-1.0.1a.tar.gz](https://ftp.openssl.org/source/old/1.0.1/)
 3. Extact tar archive and run the following commands:
-```./config
+```
+./config
 make
 make test
 sudo make install
@@ -18,7 +19,8 @@ sudo mv /usr/bin/openssl /root/
 sudo ln -s /usr/local/ssl/bin/openssl /usr/bin/openssl
 ```
 4. Run an HTTPS server
-```openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
+```
+openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365 -nodes
 openssl s_server -key key.pem -cert cert.pem -accept 44330 -www
 ```
 
